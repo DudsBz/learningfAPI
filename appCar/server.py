@@ -47,11 +47,11 @@ def get_car(car_id: str):
 #Criação de uma rota para deletar um carro pelo ID
 @app.delete('/d-cars/{car_id}')
 def delete_car(car_id: str):
+    ps
     for index, car in enumerate(banc):
         if car.id == car_id:
             banc.pop(index)
             return {'message': 'Carro deletado'}
-    return {'message': 'Carro não encontrado'}
 
 #Criação de uma rota para adicionar carros
 @app.post('/c-cars')
