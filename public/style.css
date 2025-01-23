@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-style: italic;  
+    width: 100vw;
+    height: 100vh;
+    background-color: #F1F1F1;  
+    margin: auto;
+    display: block;
+}
+
+/* Estilizando o botão */
+button {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 15px 20px; /* Preenchimento interno */
+    margin: 10px 0; /* Margem */
+    border: none; /* Remover borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo ao clicar no botão */
+button:active {
+    background-color: #3e8e41; /* Cor de fundo ao clicar */
+    transform: translateY(2px); /* Efeito de clique */
+}
+#form_cadastro{
+    width: 35vw;
+    height: 10vh;
+    background-color: #333333;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px;
+    border-style: solid;
+}
+/* Estilizando o input type="text"*/
+input[type="text"] {
+    padding: 15px 20px; /* Preenchimento interno */
+    margin: 10px 0;
+    margin-right: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+/* Adicionando estilo ao input quando está em foco */
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#list_car{
+    width: 35vw;
+    height: 10vh;
+    background-color: #333333;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px;
+    border-style: solid;
+}
