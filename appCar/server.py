@@ -6,12 +6,15 @@ from pydantic import BaseModel
 #Importação para o ID
 from uuid import uuid4 
 #Importação para portas
+#O erro de CORS (Cross-Origin Resource Sharing) ocorre quando o backend não aceita origens diferentes da dele e tenta acessar recursos de outro site
+#Para resolver isso, é preciso de: fastapi.middleware.cors importar o CORSMiddleware...
+# passar a origem estrangeira e os parâmetros de configuração app.add_middleware
 from fastapi.middleware.cors import CORSMiddleware
 
 #roda a aplicação
 app = FastAPI()
 #Configuração para aceitar requisições de qualquer origem
-origins = ['http://127.0.0.1:5500']
+origins = ['http://127.0.0.1:5500']  
 
 #Parâmetros para aceitar requisições de qualquer origem
 app.add_middleware(
@@ -22,7 +25,8 @@ app.add_middleware(
     allow_credentials=True,
     # Uma lista de métodos HTTP que devem ser permitidos para solicitações de origem cruzada
     allow_methods=["*"],
-    # Uma lista de cabeçalhos de solicitação HTTP que devem ser suportados para solicitações de origem cruzada
+    # Uma lista de cabeçalhos de solicitação HTTP 
+    # Eles, os cabeçalhos, devem ser suportados para solicitações de origem cruzada
     allow_headers=["*"],
 )
 
@@ -33,6 +37,7 @@ class Car(BaseModel):
     model: str
     year: int
     price: float
+    #Posso adicionar outras coisas também, como cor, marca, etc
 #Criação de uma lista de carros
 #"banc" é uma lista de objetos do tipo Car
 #"List" é um tipo de dado que armazena uma lista
